@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>English Lessons</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Markdown parser (tiny, 8KB). Falls back to naive parser if offline -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <!-- Confetti for celebration (tiny). Non-fatal if blocked -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="app.js" type="module" defer></script>
+</head>
+<body>
+  <!-- Lesson picker -->
+  <main id="picker" class="view hidden">
+    <header class="topbar">
+      <h1>Pick a Lesson</h1>
+    </header>
+    <section id="lessons-grid" class="grid"></section>
+  </main>
+
+  <!-- Lesson runner -->
+  <main id="runner" class="view hidden">
+    <header class="topbar">
+      <button id="backToPicker" class="link">&larr; Lessons</button>
+      <h1 id="lessonTitle">Lesson</h1>
+      <div class="spacer"></div>
+      <div id="difficultyDock" class="difficulty-dock" aria-label="Difficulty">
+        <label><input type="radio" name="diff" value="easy"> Easy</label>
+        <label><input type="radio" name="diff" value="medium"> Medium</label>
+        <label><input type="radio" name="diff" value="hard"> Hard</label>
+      </div>
+    </header>
+
+    <!-- stage container -->
+    <section id="stageContainer"></section>
+
+    <!-- nav -->
+    <footer class="bottombar">
+      <button id="prevBtn" class="nav-btn" title="Previous">&#x25C0;</button>
+      <div id="stageIndicator" class="stage-indicator"></div>
+      <button id="nextBtn" class="nav-btn" title="Next">&#x25B6;</button>
+    </footer>
+  </main>
+
+  <!-- templates -->
+  <template id="tpl-reading">
+    <article class="reading">
+      <h2 class="reading-title"></h2>
+      <div class="md"></div>
+    </article>
+  </template>
+
+  <template id="tpl-dialogue">
+    <section class="dialogue">
+      <img class="dialogue-bg" alt="Dialogue background"/>
+      <div class="dialogue-overlay">
+        <h2>Dialogue</h2>
+        <p>Discuss what you see. Practice lines from the reading.</p>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-watch">
+    <section class="watch">
+      <h2>Watch Together</h2>
+      <div class="video-wrap">
+        <iframe id="ytFrame" title="Watch Together" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="hint">Tip: pause for vocabulary checks.</p>
+    </section>
+  </template>
+
+  <template id="tpl-qanda">
+    <section class="qanda">
+      <h2>Q &amp; A</h2>
+      <img class="qanda-img" alt="Q&A"/>
+      <div class="md qanda-md"></div>
+      <button class="confetti-btn">Celebrate 🎉</button>
+    </section>
+  </template>
+</body>
+</html>
