@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main   # or 'master' depending on your repo
+      - main
 
 permissions:
   contents: read
@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
