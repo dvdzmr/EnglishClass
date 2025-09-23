@@ -1,8 +1,46 @@
----
-type: abcs
-letters: J-R
----
-
 # ABC Lesson 2
 
-Trace the letters J–R and practice their sounds.
+---page---
+
+## Letter F
+Sound: F like in Fish 🐟
+
+---page---
+
+{trace:F}
+
+---page---
+
+## Letter G
+Sound: G like in Goat 🐐
+
+---page---
+
+{trace:G}
+
+---page---
+
+## Letter H
+Sound: H like in Hat 🎩
+
+---page---
+
+{trace:H}
+
+---page---
+
+## Letter I
+Sound: I like in Ice 🧊
+
+---page---
+
+{trace:I}
+
+---page---
+
+## Letter J
+Sound: J like in Juice 🥤
+
+---page---
+
+{trace:J}

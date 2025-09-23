@@ -5,24 +5,41 @@
   <title>English Class Lessons</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="js/renderLesson.js"></script>
+  <script src="js/renderLesson.js" defer></script>
 </head>
 <body>
-  <h1>Welcome to English Class</h1>
-  <p>Select a lesson:</p>
-  <ul>
-    <li><a href="lessons/abcs-1.md">ABCs Lesson 1</a></li>
-    <li><a href="lessons/abcs-2.md">ABCs Lesson 2</a></li>
-    <li><a href="lessons/abcs-3.md">ABCs Lesson 3</a></li>
-    <li><a href="lessons/conversations.md">Basic Conversations</a></li>
-    <li><a href="lessons/game-dressup.md">Dress-up Game</a></li>
-    <li><a href="lessons/lesson1.md">Lesson 1</a></li>
-    <li><a href="lessons/lesson2.md">Lesson 2</a></li>
-    <li><a href="lessons/lesson3.md">Lesson 3</a></li>
-    <li><a href="lessons/lesson4.md">Lesson 4</a></li>
-    <li><a href="lessons/lesson5.md">Lesson 5</a></li>
-    <li><a href="lessons/lesson6.md">Lesson 6</a></li>
-  </ul>
+  <div id="menu-overlay" class="hidden">
+    <h2>Select a Lesson</h2>
+    <ul id="lesson-list">
+      <li onclick="loadLesson('lessons/abcs-1.md')">ABCs Lesson 1</li>
+      <li onclick="loadLesson('lessons/abcs-2.md')">ABCs Lesson 2</li>
+      <li onclick="loadLesson('lessons/abcs-3.md')">ABCs Lesson 3</li>
+      <li onclick="loadLesson('lessons/conversations.md')">Basic Conversations</li>
+      <li onclick="loadLesson('lessons/game-dressup.md')">Dress-up Game</li>
+      <li onclick="loadLesson('lessons/lesson1.md')">Lesson 1</li>
+      <li onclick="loadLesson('lessons/lesson2.md')">Lesson 2</li>
+      <li onclick="loadLesson('lessons/lesson3.md')">Lesson 3</li>
+      <li onclick="loadLesson('lessons/lesson4.md')">Lesson 4</li>
+      <li onclick="loadLesson('lessons/lesson5.md')">Lesson 5</li>
+      <li onclick="loadLesson('lessons/lesson6.md')">Lesson 6</li>
+    </ul>
+  </div>
+
+  <div id="top-bar">
+    <button id="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+    <span id="lesson-title">Select a lesson</span>
+    <span id="progress-text"></span>
+  </div>
+
   <div id="lesson-container"></div>
+
+  <div id="nav-controls">
+    <button onclick="prevSlide()">⬅ Prev</button>
+    <button onclick="nextSlide()">Next ➡</button>
+  </div>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
 </body>
 </html>

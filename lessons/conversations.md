@@ -1,13 +1,24 @@
----
-type: conversation
-pdf: sample.pdf
----
-
 # Basic Conversations
 
-Practice greetings and simple dialogues.
+---page---
 
-## Example
+## Greetings
+Teacher: Hello!  
+Student: Hi!
 
-- **Teacher**: Hello, how are you?  
-- **Student**: I’m fine, thank you.
+---page---
+
+## How are you?
+Teacher: How are you?  
+Student: I'm fine, thank you.
+
+---page---
+
+{pdf:sample.pdf}
+
+---page---
+
+## Practice
+Fill in the blanks:  
+"Hello, my name is ____."  
+"How are you? I am ____."
